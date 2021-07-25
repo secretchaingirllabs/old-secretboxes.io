@@ -14,7 +14,7 @@ export const FigmentLearnBox = () => {
       <FigmentLearnLottie style={{ width: '264px', height: '186px' }} />
       <div>
         <div className="flex items-center mb-4 space-x-4">
-          <h4 className="text-5xl font-display">Figment Learn</h4>
+          <h2 className="text-5xl font-display">Figment Learn</h2>
           <button
             type="button"
             className="px-2 py-1 bg-white border rounded-lg border-gray-body text-gray-body"

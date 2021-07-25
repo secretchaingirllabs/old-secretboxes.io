@@ -37,8 +37,10 @@ const Nav: React.FC<{ navLinks: NavLinkType[] }> = ({ navLinks }) => {
         <div className="absolute left-[10px] top-[32px]">
           <Link href="/">
             <a data-testid="logo">
+              <span className="sr-only">To Homepage</span>
               <Image
                 src={`/images/nav_logo_${resolvedTheme}.webp`}
+                alt="logo"
                 width="72px"
                 height="72px"
               />

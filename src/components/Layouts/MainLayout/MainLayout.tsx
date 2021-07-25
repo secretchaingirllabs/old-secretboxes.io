@@ -16,7 +16,7 @@ const Layout: React.FC<{ Footer?: () => JSX.Element }> = ({
   const meta: any = {
     title: `Home – ${appTitle}`,
     description: appDescription,
-    image: `${SITE_URL}/images/banner.png`,
+    image: `${SITE_URL}/images/cover.png`,
     type: 'website',
     ...customMeta,
   }

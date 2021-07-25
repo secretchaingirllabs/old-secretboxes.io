@@ -8,9 +8,9 @@ export const SecretBoxesSection = () => {
       <div className="max-w-[1152px] mx-auto flex justify-between items-center">
         <div className="mx-auto space-y-4 text-dark-text dark:text-dark-body md:mx-0">
           <div className="mb-8">
-            <h4 className="text-6xl tracking-wide font-display dark:text-primary">
+            <h1 className="text-6xl tracking-wide font-display dark:text-primary">
               What are secret boxes?
-            </h4>
+            </h1>
           </div>
           <p>
             Secret Boxes are quickstarts to help you build decentralized,

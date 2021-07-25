@@ -10,7 +10,7 @@
       ]
     },
     {
-      "source": "/assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.woff2",
+      "source": "/assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf",
       "headers": [
         {
           "key": "Cache-Control",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "source": "/assets/fonts/Source_Sans_Pro/SourceSansPro-Semibold.woff2",
+      "source": "/assets/fonts/Source_Sans_Pro/SourceSansPro-Semibold.ttf",
       "headers": [
         {
           "key": "Cache-Control",

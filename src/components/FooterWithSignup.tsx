@@ -22,10 +22,20 @@ export const FooterWithSignup = () => {
       <div className="md:flex">
         <div className="relative w-full md:w-7/12 bg-primary pb-80">
           <div className="absolute z-10 top-24 -right-32">
-            <Image src="/images/footer_boxes.webp" height="650" width="322" />
+            <Image
+              alt="floating boxes"
+              src="/images/footer_boxes.webp"
+              height="650"
+              width="322"
+            />
           </div>
           <div className="absolute bottom-52 left-1/2 -right-1/2">
-            <Image src="/images/footer_ufo_left.webp" height="105" width="170" />
+            <Image
+              alt="ufo"
+              src="/images/footer_ufo_left.webp"
+              height="105"
+              width="170"
+            />
           </div>
           <div className="flex items-end">
             <div className="ml-auto md:mr-[330px] mt-[166px] inline-flex px-[10px]">
@@ -35,7 +45,12 @@ export const FooterWithSignup = () => {
         </div>
         <div className="relative md:w-5/12 bg-gray-primary">
           <div className="absolute transform bottom-32 right-20 rotate-3">
-            <Image src="/images/footer_ufo_right.webp" height="105" width="145" />
+            <Image
+              alt="ufo"
+              src="/images/footer_ufo_right.webp"
+              height="105"
+              width="145"
+            />
           </div>
           <div className="px-[10px] pb-[300px] md:pb-0 md:ml-[94px] mr-auto pt-[232px] max-w-[600px]">
             <ul className="space-y-6 text-5xl font-display text-dark-body mb-13">

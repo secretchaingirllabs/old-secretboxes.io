@@ -17,10 +17,12 @@ export const SocialsNav: React.FC<{ socials: Social[]; iconStyle?: IconStyle }> 
         <li key={s.label}>
           <Link href={s.href}>
             <a
+              target="_blank"
               data-testid={`${s.label}-social`}
               style={{ background: iconStyle && iconStyle.backgroundColor }}
               className="h-[30px] w-[30px] flex items-center justify-center bg-white rounded-full hover:text-gray-label text-gray-body transition-colors"
             >
+              <span className="sr-only">{s.label}</span>
               {s.icon}
             </a>
           </Link>

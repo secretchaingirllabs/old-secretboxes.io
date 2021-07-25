@@ -60,6 +60,7 @@ export const HeroSection = () => (
         </div>
       </div>
       <a href="#secretBoxes">
+        <span className="sr-only">To Secret Boxes</span>
         <svg
           className="w-6 h-6 mx-auto mt-20 dark:text-dark-body"
           width="18"

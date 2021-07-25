@@ -16,14 +16,14 @@ class MyDocument extends Document {
             rel="preload"
             href="/assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf"
             as="font"
-            type="font/ttf"
+            type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
             href="/assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf"
             as="font"
-            type="font/ttf"
+            type="font/woff2"
             crossOrigin="anonymous"
           />
           <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon.png" />

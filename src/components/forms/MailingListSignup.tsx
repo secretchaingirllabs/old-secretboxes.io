@@ -22,9 +22,9 @@ export const MailingListSignup: React.FC<MailingListSignupProps> = ({ onSubmit }
 
   return (
     <div className="text-dark-text">
-      <h3 className="mb-2 text-2xl font-semibold font-body">
+      <p className="mb-2 text-2xl font-semibold font-body">
         Sign up for the Mailing List
-      </h3>
+      </p>
       <p className="mb-10 text-sm">
         We don’t send these very often so you know if you get an
         <br />

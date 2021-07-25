@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://secretboxes.vercel.app
+Sitemap: https://secret-boxes.vercel.app
