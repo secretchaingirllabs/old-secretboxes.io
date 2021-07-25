@@ -1,8 +1,12 @@
 const fs = require('fs')
 const globby = require('globby')
 const prettier = require('prettier')
-const { SITE_URL } = require('../src/config/seo')
 
+const SITE_URL =
+  process.env.NODE_ENV === 'development'
+    ? 'https://localhost:3000'
+    : 'https://secretboxes.vercel.app'
+//
 ;(async () => {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js')
   const pages = await globby([
