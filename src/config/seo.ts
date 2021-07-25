@@ -4,4 +4,5 @@ export const SITE_URL =
     : 'https://secretboxes.vercel.app'
 
 export const appTitle = 'Secret Boxes'
-export const appDescription = 'Full-stack developer, writer and design enthusiast, '
+export const appDescription =
+  'Get started with creating decentralized apps with Secret Network'
