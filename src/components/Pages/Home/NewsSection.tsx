@@ -21,12 +21,12 @@ export const NewsSection = () => {
             src="/images/news_griptape.webp"
             layout="fill"
           />
-          <p className="absolute flex flex-col items-center justify-center transition-all group-hover:bottom-[110px] transform z-30 text-white bottom-5 left-6 group-hover:right-1/2 group-hover:translate-x-1/2 tracking-wider">
+          <p className="absolute group-hover:flex flex-col items-center justify-center transition-all group-hover:bottom-36 transform z-30 text-white bottom-5 left-6 group-hover:translate-y-1/4 group-hover:translate-x-[5%] tracking-wider">
             <h2 className="whitespace-nowrap group-hover:text-5xl text-[34px] transition-all group-hover:mb-3 font-display">
               &ldquo;GripTape&rdquo; Secret Box Launching Soon
             </h2>
             <div className="hidden group-hover:block">
-              <p className="h-0 tracking-tighter text-center group-hover:h-auto whitespace-nowrap">
+              <p className="h-0 tracking-tighter text-center whitespace-nowrap">
                 Brought to you by the Stake or Die! team, GripTape makes it easy to
                 interact with the network.
               </p>
@@ -40,12 +40,12 @@ export const NewsSection = () => {
             src="/images/news_richie_rich.webp"
             layout="fill"
           />
-          <p className="absolute flex flex-col items-center justify-center transition-all group-hover:bottom-[110px] transform z-30 text-white bottom-5 left-6 group-hover:right-1/2 group-hover:translate-x-1/2 tracking-wider">
+          <p className="absolute group-hover:flex flex-col items-center justify-center transition-all group-hover:bottom-36 transform z-30 text-white bottom-5 left-6 group-hover:translate-y-1/4 group-hover:translate-x-[5%] tracking-wider">
             <h2 className="whitespace-nowrap group-hover:text-5xl text-[34px] transition-all group-hover:mb-3 font-display">
               &ldquo;Richie Rich&rdquo; Secret Box
             </h2>
             <div className="hidden group-hover:block">
-              <p className="h-0 tracking-tighter text-center group-hover:h-auto whitespace-nowrap">
+              <p className="h-0 tracking-tighter text-center whitespace-nowrap">
                 Who’s the richest?
               </p>
             </div>
@@ -63,12 +63,12 @@ export const NewsSection = () => {
             src="/images/news_secret_voting_fg.webp"
             layout="fill"
           />
-          <p className="absolute flex flex-col items-center justify-center transition-all group-hover:bottom-[110px] transform z-30 text-white bottom-5 left-6 group-hover:right-1/2 group-hover:translate-x-1/2 tracking-wider">
+          <p className="absolute group-hover:flex flex-col items-center justify-center transition-all group-hover:bottom-36 transform z-30 text-white bottom-5 left-6 group-hover:translate-y-1/4 group-hover:translate-x-[25%] tracking-wider">
             <h2 className="whitespace-nowrap group-hover:text-5xl text-[34px] transition-all group-hover:mb-3 font-display">
               Secret Voting Box
             </h2>
             <div className="hidden group-hover:block">
-              <p className="h-0 tracking-tighter text-center group-hover:h-auto whitespace-nowrap">
+              <p className="h-0 tracking-tighter text-center whitespace-nowrap">
                 Vote early, often and in private.
               </p>
             </div>
@@ -79,12 +79,12 @@ export const NewsSection = () => {
           <div className="absolute translate-x-1/2 translate-y-1/2 right-1/2 bottom-1/2">
             <Image src="/images/news_sienna_network.webp" width="170px" height="170px" />
           </div>
-          <p className="absolute flex flex-col items-center justify-center transition-all group-hover:bottom-[110px] transform z-30 text-white bottom-5 left-6 group-hover:right-1/2 group-hover:translate-x-1/2 tracking-wider">
+          <p className="absolute group-hover:flex flex-col items-center justify-center transition-all group-hover:bottom-36 transform z-30 text-white bottom-5 left-6 group-hover:translate-y-1/4 group-hover:translate-x-[75%] tracking-wider">
             <h2 className="whitespace-nowrap group-hover:text-5xl text-[34px] transition-all group-hover:mb-3 font-display">
               Sienna Network
             </h2>
             <div className="hidden group-hover:block">
-              <p className="h-0 tracking-tighter text-center group-hover:h-auto whitespace-nowrap">
+              <p className="h-0 tracking-tighter text-center whitespace-nowrap">
                 First DeFi Protocol built on Secret Network.
               </p>
             </div>
