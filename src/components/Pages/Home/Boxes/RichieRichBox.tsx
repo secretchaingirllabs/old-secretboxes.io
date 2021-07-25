@@ -9,7 +9,7 @@ export const RichieRichBox = () => {
     // eslint-disable-next-line
     <div
       onClick={() => setOpen((p) => !p)}
-      className="flex items-center space-x-4 focus:outline-none "
+      className="flex items-center space-x-4 cursor-pointer focus:outline-none"
     >
       <RichieRichLottie style={{ width: '264px', height: '186px' }} />
       <div>

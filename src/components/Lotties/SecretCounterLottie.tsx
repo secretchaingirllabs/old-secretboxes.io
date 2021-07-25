@@ -1,10 +1,11 @@
-import { FC, useEffect, useRef } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import lottie from 'lottie-web'
 
 export const SecretCounterLottie: FC<
   React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 > = (props) => {
   const container = useRef(null)
+  const [hovered, setHovered] = useState(false)
 
   useEffect(() => {
     lottie.loadAnimation({
@@ -12,13 +13,27 @@ export const SecretCounterLottie: FC<
       container: container.current,
       path: '/assets/lottieFiles/secretCounter.json',
       speed: 1,
-      loop: true,
-      autoplay: true,
+      autoplay: false,
+      loop: false,
       name: 'secretCounter',
     })
 
     return () => lottie.destroy('secretCounter')
   }, [])
 
-  return <div {...props} data-testid="secret-counter-lottie" ref={container} />
+  useEffect(() => {
+    if (hovered) lottie.play('secretCounter')
+    if (!hovered) lottie.stop('secretCounter')
+  }, [hovered])
+
+  return (
+    // eslint-disable-next-line
+    <div
+      onMouseOver={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      data-testid="secret-counter-lottie"
+      ref={container}
+      {...props}
+    />
+  )
 }

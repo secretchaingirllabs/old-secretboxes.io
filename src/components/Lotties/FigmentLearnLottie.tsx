@@ -1,10 +1,11 @@
-import { FC, useEffect, useRef } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import lottie from 'lottie-web'
 
 export const FigmentLearnLottie: FC<
   React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 > = (props) => {
   const container = useRef(null)
+  const [hovered, setHovered] = useState(false)
 
   useEffect(() => {
     lottie.loadAnimation({
@@ -13,12 +14,25 @@ export const FigmentLearnLottie: FC<
       path: '/assets/lottieFiles/figmentLearn.json',
       speed: 1,
       loop: true,
-      autoplay: true,
+      autoplay: false,
       name: 'figmentLearn',
     })
-
     return () => lottie.destroy('figmentLearn')
   }, [])
 
-  return <div {...props} data-testid="figment-learn-lottie" ref={container} />
+  useEffect(() => {
+    if (hovered) lottie.play('figmentLearn')
+    if (!hovered) lottie.stop('figmentLearn')
+  }, [hovered])
+
+  return (
+    // eslint-disable-next-line
+    <div
+      onMouseOver={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      data-testid="figment-learn-lottie"
+      ref={container}
+      {...props}
+    />
+  )
 }
