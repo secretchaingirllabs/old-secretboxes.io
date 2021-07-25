@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Gobold High';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/Gobold/Gobold_High.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('woff2');
+  }
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-display: swap;
+    src: url('/assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf') format('ttf');
+  }
+}
+
+:root {
+  --primary: #f8d948;
+  --gray-primary: #939597;
+  --gray-body: #4e4b66;
+  --gray-label: #6e7191;
+  --dark-text: #1e2022;
+  --dark-secondary: #282828;
+  --blue-primary: #091133;
+
+  --dark: #121314;
+  --dark-body: #fcfcfc;
+
+  --font-display: 'Gobold High';
+  --font-body: 'Source Sans Pro';
+}
