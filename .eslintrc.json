@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "no-console": "error", // no console statements allowed
+    "prettier/prettier": "off",
+    "react/no-danger": "off", // it's self explainatory that no-danger should be used sparingly
+    "react/prop-types": "off", // as long as TS strict mode is off this is not required
+    "react/react-in-jsx-scope": "off", // next.js does not require react in most components
+    "react/jsx-props-no-spreading": "off", // used a lot in react hook form
+    "import/prefer-default-export": "off", // allows multiple imports { loginSchema, LoginForm }
+    "import/no-extraneous-dependencies": "off", // testUtils re-exports @testing-library/react
+    "react/require-default-props": "off", // Typescript catches optional props
+    "no-unneeded-ternary": "off", // @/hooks/useAuth line 25
+    "jsx-a11y/label-has-associated-control": "off", // InputField and SelectField not being parsed as control
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ]
+  }
+}
