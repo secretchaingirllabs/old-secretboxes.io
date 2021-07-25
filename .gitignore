@@ -41,3 +41,7 @@ __generated__
 .env
 
 /src/generated
+
+.eslintcache
+
+sitemap.xml
