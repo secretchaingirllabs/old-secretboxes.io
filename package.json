@@ -82,6 +82,7 @@
     "src/**/*.{ts,tsx,js,jsx}": [
       "yarn lint --cache --fix",
       "yarn format",
+      "yarn tsc",
       "yarn test --watchAll=false --findRelatedTests --bail"
     ]
   }
