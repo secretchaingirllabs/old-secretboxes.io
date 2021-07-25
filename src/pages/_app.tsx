@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const Footer = ((Component as any).Footer as any) ?? DefaultFooter
 
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider enableSystem={false} attribute="class">
       <MainLayout Footer={Footer}>
         <Component {...pageProps} />
       </MainLayout>
