@@ -1,4 +1,8 @@
-import { useState } from 'react'
+import { yupResolver } from '@hookform/resolvers/yup'
+import clsx from 'clsx'
+import { useForm } from 'react-hook-form'
+import * as yup from 'yup'
+import { PrimaryButton } from '../common/PrimaryButton'
 
 export interface MailingListFormValues {
   name: string
@@ -9,16 +13,20 @@ export type SignUpResponse = 'failed' | 'success'
 interface MailingListSignupProps {
   onSubmit: (values: MailingListFormValues) => Promise<SignUpResponse>
 }
-export const MailingListSignup: React.FC<MailingListSignupProps> = ({ onSubmit }) => {
-  const [values, setValues] = useState<MailingListFormValues>({
-    name: '',
-    email: '',
-    agreeToRecieve: false,
-  })
+const mailingListSchema: yup.SchemaOf<MailingListFormValues> = yup.object().shape({
+  name: yup.string().required('Name is required'),
+  email: yup.string().required('Email is required').email('Must be a valid email'),
+  agreeToRecieve: yup.boolean(),
+})
 
-  const setValue = (field: keyof MailingListFormValues, value: any) => {
-    setValues((p) => ({ ...p, [field]: value }))
-  }
+export const MailingListSignup: React.FC<MailingListSignupProps> = ({ onSubmit }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<MailingListFormValues>({
+    resolver: yupResolver(mailingListSchema),
+  })
 
   return (
     <div className="text-dark-text">
@@ -32,62 +40,70 @@ export const MailingListSignup: React.FC<MailingListSignupProps> = ({ onSubmit }
         <br />
         reading!
       </p>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault()
-          e.persist()
-          onSubmit(values)
-        }}
-      >
-        <div className="mb-6">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="relative mb-6">
           <label htmlFor="name">
-            <span data-testid="name-label" className="block mb-3">
+            <span
+              data-testid="name-label"
+              className={clsx(errors.name?.message && 'text-error', 'block mb-2')}
+            >
               Name
             </span>
             <input
               data-testid="name-field"
               type="text"
-              className="max-w-md px-2 py-1 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
+              className={clsx(
+                errors.name?.message && 'border-2 border-error',
+                'max-w-md px-2 py-1 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary'
+              )}
               placeholder="Laura"
-              onChange={(e) => setValue('name', e.target.value)}
-              required
+              {...register('name')}
             />
+            {errors.name?.message && (
+              <p className="absolute pl-4 text-sm -bottom-5 text-error">
+                {errors.name?.message}
+              </p>
+            )}
           </label>
         </div>
-        <div className="mb-4">
+        <div className="relative mb-5">
           <label htmlFor="email">
-            <span data-testid="email-label" className="block mb-3">
+            <span
+              data-testid="email-label"
+              className={clsx(errors.name?.message && 'text-error', 'block mb-2')}
+            >
               Email
             </span>
             <input
               data-testid="email-field"
               type="email"
-              className="max-w-md px-2 py-1 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
+              className={clsx(
+                errors.email?.message && 'border-2 border-error',
+                'max-w-md px-2 py-1 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary'
+              )}
               placeholder="joe@email.com"
-              onChange={(e) => setValue('email', e.target.value)}
-              required
+              {...register('email')}
             />
           </label>
+          {errors.email?.message && (
+            <p className="absolute pl-4 text-sm -bottom-5 text-error">
+              {errors.email?.message}
+            </p>
+          )}
         </div>
         <div className="mb-6">
           <label className="space-x-3" htmlFor="IAgreeToRecieveCoolStuff">
             <input
-              className="text-gray-body ring"
+              className="border-2 text-gray-body focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
               type="checkbox"
-              name="IAgreeToRecieveCoolStuff"
               id="IAgreeToRecieveCoolStuff"
               data-testid="i-agree"
-              onChange={(e) => setValue('agreeToRecieve', e.target.checked)}
+              {...register('agreeToRecieve')}
             />
             <span>I agree to receive cool stuff from the Secret Boxes Team!</span>
           </label>
         </div>
-        <button
-          type="submit"
-          className="px-6 py-2 font-semibold text-white transition rounded-lg bg-gray-body hover:bg-gray-label"
-        >
-          Subscribe
-        </button>
+        <PrimaryButton type="submit">Subscribe</PrimaryButton>
       </form>
     </div>
   )

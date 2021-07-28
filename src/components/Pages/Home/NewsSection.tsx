@@ -2,20 +2,23 @@ import Image from 'next/image'
 
 export const NewsSection = () => {
   return (
-    <section className="max-w-[1152px] mx-auto flex flex-col items-center">
+    <section className="relative flex flex-col items-center mx-auto">
       <h1 className="mb-5 leading-tight font-display text-8xl dark:text-primary text-dark-text">
         News & Updates
       </h1>
-      <p className="mb-[84px]">
+      <p className="mb-[84px] text-center">
         What’s going on in the Secret Boxes universe? Here is where devs can find out
         about new
         <br />
         Secret Boxes, launch announcements, protocol updates, developer working groups and
         more.
       </p>
-      <div className="grid grid-cols-1 gap-0 md:grid-cols-3 md:gap-9">
+      <div className="absolute top-20">
+        <Image src="/images/home_news_bg.webp" width="1311px" height="267px" />
+      </div>
+      <div className="max-w-[1152px]  grid grid-cols-1 gap-0 md:grid-cols-3 md:gap-9">
         <article className="cursor-pointer relative group md:col-start-1 md:col-end-3 h-[282px]">
-          <div className="absolute inset-0 z-10 transition-all duration-400 bg-gradient-to-t to-white/0 via-black/80 from-black/80 bg-size-200 bg-pos-0 group-hover:bg-pos-100" />
+          <div className="absolute inset-0 z-10 transition-all duration-300 bg-gradient-to-t to-white/0 via-black/80 from-black/80 bg-size-200 bg-pos-0 group-hover:bg-pos-100" />
           <Image
             className="absolute top-0"
             src="/images/news_griptape.webp"
@@ -34,7 +37,7 @@ export const NewsSection = () => {
           </div>
         </article>
         <article className="cursor-pointer relative group md:col-start-3 md:col-end-4 h-[282px]">
-          <div className="absolute inset-0 z-10 transition-all duration-400 bg-gradient-to-t to-white/0 via-black/80 from-black/80 bg-size-200 bg-pos-0 group-hover:bg-pos-100" />
+          <div className="absolute inset-0 z-10 transition-all duration-300 bg-gradient-to-t to-white/0 via-black/80 from-black/80 bg-size-200 bg-pos-0 group-hover:bg-pos-100" />
           <Image
             className="absolute top-0"
             src="/images/news_richie_rich.webp"
@@ -53,7 +56,7 @@ export const NewsSection = () => {
           </div>
         </article>
         <article className="cursor-pointer relative group md:col-start-1 md:col-end-2 h-[282px]">
-          <div className="absolute inset-0 z-20 transition-all duration-400 bg-gradient-to-t to-white/0 via-black/80 from-black/80 bg-size-200 bg-pos-0 group-hover:bg-pos-100" />
+          <div className="absolute inset-0 z-20 transition-all duration-300 bg-gradient-to-t to-white/0 via-black/80 from-black/80 bg-size-200 bg-pos-0 group-hover:bg-pos-100" />
           <Image
             className="absolute top-0 z-10"
             src="/images/news_secret_voting.webp"
@@ -78,7 +81,7 @@ export const NewsSection = () => {
           </div>
         </article>
         <article className="cursor-pointer relative group md:col-start-2 md:col-end-4 h-[282px] bg-black">
-          <div className="absolute inset-0 z-10 transition-all duration-400 bg-gradient-to-t to-white/0 via-black/80 from-black/80 bg-size-200 bg-pos-0 group-hover:bg-pos-100" />
+          <div className="absolute inset-0 z-10 transition-all duration-300 bg-gradient-to-t to-white/0 via-black/80 from-black/80 bg-size-200 bg-pos-0 group-hover:bg-pos-100" />
           <div className="absolute translate-x-1/2 translate-y-1/2 right-1/2 bottom-1/2">
             <Image
               src="/images/news_sienna_network.webp"

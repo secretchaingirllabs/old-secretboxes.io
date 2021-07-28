@@ -14,6 +14,7 @@ const SITE_URL =
     'src/data/**/*.mdx',
     '!src/pages/_*.tsx',
     '!src/pages/api',
+    '!src/pages/404.tsx',
   ])
 
   const sitemap = `

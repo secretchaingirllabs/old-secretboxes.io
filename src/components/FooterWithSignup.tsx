@@ -1,5 +1,7 @@
-import { socials } from '@/config/socials'
+import { footerLinks } from '@/config/footerLinks'
+import { socials, supportEmail } from '@/config/socials'
 import Image from 'next/image'
+import Link from 'next/link'
 import {
   MailingListFormValues,
   MailingListSignup,
@@ -53,12 +55,12 @@ export const FooterWithSignup = () => {
             />
           </div>
           <div className="px-[10px] pb-[300px] md:pb-0 md:ml-[94px] mr-auto pt-[232px] max-w-[600px]">
-            <ul className="space-y-6 text-5xl font-display text-dark-body mb-13">
+            <ul className="space-y-6 text-5xl text-white font-display mb-13">
               <li>Contact Us</li>
               <li>Team</li>
               <li>Github</li>
             </ul>
-            <p className="mb-4 leading-5 text-dark-body">
+            <p className="mb-4 leading-5 text-white">
               We’d love to hear from you! Feel free to contact us
               <br />
               with your ideas or feedback.
@@ -67,7 +69,7 @@ export const FooterWithSignup = () => {
               <br />
               contribute.
             </p>
-            <p className="font-semibold text-dark-body">support@secretboxes.io</p>
+            <p className="font-semibold text-white">{supportEmail}</p>
           </div>
         </div>
       </div>
@@ -79,12 +81,16 @@ export const FooterWithSignup = () => {
         </div>
         <div className="bg-[#14142B] h-[1px] mb-9" />
         <div className="flex flex-col justify-between w-full md:flex-row">
-          <ul className="flex mb-2 space-x-5 dark:text-dark-text">
-            <li>SCG Foundation</li>
-            <li>Contact</li>
-            <li>Support</li>
+          <ul className="flex space-x-5">
+            {footerLinks.map((fl) => (
+              <li key={fl.label}>
+                <Link href={fl.href}>
+                  <a>{fl.label}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
-          <p className="text-dark-body">© 2021 SecretChainGirl Foundation</p>
+          <p className="text-white">© 2021 SecretChainGirl Foundation</p>
         </div>
       </div>
     </footer>

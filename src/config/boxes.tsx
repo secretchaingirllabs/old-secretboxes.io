@@ -9,7 +9,7 @@ export interface Box {
 export const boxes: Box[] = [
   {
     label: 'Secret Counter',
-    href: '/#',
+    href: '/secret-boxes#secretCounter',
     icon: (
       <svg width="33" height="30" viewBox="0 0 33 30" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -54,7 +54,7 @@ export const boxes: Box[] = [
   },
   {
     label: 'Figment Learn',
-    href: '/#',
+    href: '/secret-boxes#figmentLearn',
     icon: (
       <svg width="33" height="30" viewBox="0 0 33 30" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -99,7 +99,7 @@ export const boxes: Box[] = [
   },
   {
     label: 'Richie Rich',
-    href: '/#',
+    href: '/secret-boxes#richieRich',
     icon: (
       <svg width="33" height="30" viewBox="0 0 33 30" xmlns="http://www.w3.org/2000/svg">
         <path

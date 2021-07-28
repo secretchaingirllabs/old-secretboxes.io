@@ -68,3 +68,5 @@ export const socials: Social[] = [
     ),
   },
 ]
+
+export const supportEmail = 'support@secretboxes.io'

@@ -2,8 +2,14 @@ import { FC, useEffect, useRef, useState } from 'react'
 import lottie from 'lottie-web'
 
 export const SecretCounterLottie: FC<
-  React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
-> = (props) => {
+  React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > & {
+    width?: string
+    height?: string
+  }
+> = ({ width, height, ...props }) => {
   const container = useRef(null)
   const [hovered, setHovered] = useState(false)
 

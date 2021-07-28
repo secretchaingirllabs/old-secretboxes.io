@@ -1,4 +1,7 @@
+import { PrimaryButton } from '@/components/common/PrimaryButton'
+import { SecondaryButton } from '@/components/common/SecondaryButton'
 import { AlienWithBoxesLottie } from '@/components/Lotties/AlienWithBoxesLottie'
+import Link from 'next/link'
 
 export const HeroSection = () => (
   <section>
@@ -14,43 +17,39 @@ export const HeroSection = () => (
             started building Secret Apps.
           </p>
           <div className="flex space-x-6">
-            <button
-              type="button"
-              className="flex items-center justify-center px-4 py-2 font-semibold text-white transition-colors rounded-lg group bg-gray-body hover:bg-gray-label"
-            >
-              Start Unboxing
-              <div className="transition-all opacity-0 group-hover:scale-100 group-hover:opacity-100 group-hover:ml-2">
-                <svg
-                  className="hidden group-hover:block"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13.167 7.81718L3.16699 7.81718"
-                    stroke="#FCFCFC"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M9.13379 3.80089L13.1671 7.81689L9.13379 11.8336"
-                    stroke="#FCFCFC"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </button>
-            <button
-              type="button"
-              className="px-6 py-3 font-semibold bg-white border rounded-lg border-gray-body text-gray-body"
-            >
-              Tutorials
-            </button>
+            <Link href="/secret-boxes">
+              <a>
+                <PrimaryButton>
+                  <span>Start Unboxing</span>
+                  <div className="transition-all opacity-0 group-hover:scale-100 group-hover:opacity-100 group-hover:ml-2">
+                    <svg
+                      className="hidden group-hover:block"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.167 7.81718L3.16699 7.81718"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M9.13379 3.80089L13.1671 7.81689L9.13379 11.8336"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </PrimaryButton>
+              </a>
+            </Link>
+            <SecondaryButton>Tutorials</SecondaryButton>
           </div>
         </div>
         <div className="hidden md:block">

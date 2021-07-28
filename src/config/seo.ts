@@ -5,4 +5,4 @@ export const SITE_URL =
 
 export const appTitle = 'Secret Boxes'
 export const appDescription =
-  'Get started with creating decentralized apps with Secret Network'
+  'The beautiful, fun and easy way to get started building Secret Apps.'

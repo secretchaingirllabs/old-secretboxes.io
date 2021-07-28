@@ -34,6 +34,13 @@
   --dark-secondary: #282828;
   --blue-primary: #091133;
 
+  --error: #ed2e7e;
+  --success: #00966d;
+  --gray-bg: #f7f7fc;
+  --gray-placeholder: #a0a3bd;
+
+  --primary-light: #fff2b7;
+
   --dark: #121314;
   --dark-body: #fcfcfc;
 

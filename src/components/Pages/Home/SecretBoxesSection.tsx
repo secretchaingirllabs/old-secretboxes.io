@@ -1,3 +1,4 @@
+import { PrimaryButton } from '@/components/common/PrimaryButton'
 import { FigmentLearnBox } from './Boxes/FigmentLearnBox'
 import { RichieRichBox } from './Boxes/RichieRichBox'
 import { SecretCounterBox } from './Boxes/SecretCounterBox'
@@ -29,10 +30,7 @@ export const SecretBoxesSection = () => {
             <br />
             chain integrations, technical bootstraps and more.
           </p>
-          <button
-            type="button"
-            className="flex items-center justify-center px-4 py-2 font-semibold text-white transition-colors rounded-lg group bg-gray-body hover:bg-gray-label"
-          >
+          <PrimaryButton>
             Learn More
             <div className="transition-all opacity-0 group-hover:scale-100 group-hover:opacity-100 group-hover:ml-2">
               <svg
@@ -45,21 +43,21 @@ export const SecretBoxesSection = () => {
               >
                 <path
                   d="M13.167 7.81718L3.16699 7.81718"
-                  stroke="#FCFCFC"
+                  stroke="currentColor"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
                   d="M9.13379 3.80089L13.1671 7.81689L9.13379 11.8336"
-                  stroke="#FCFCFC"
+                  stroke="currentColor"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
               </svg>
             </div>
-          </button>
+          </PrimaryButton>
         </div>
         <div className="hidden space-y-5 md:block">
           <SecretCounterBox />

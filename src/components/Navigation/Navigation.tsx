@@ -10,7 +10,7 @@ import { NavLink } from './NavLink'
 
 const Nav: React.FC<{ navLinks: NavLinkType[] }> = ({ navLinks }) => {
   const [mounted, setMounted] = useState(false)
-  const { resolvedTheme, setTheme } = useTheme()
+  const { resolvedTheme } = useTheme()
   const { asPath } = useRouter()
   const [currentPath, setCurrentPath] = useState('')
 
@@ -21,25 +21,14 @@ const Nav: React.FC<{ navLinks: NavLinkType[] }> = ({ navLinks }) => {
   }, [asPath])
 
   return (
-    <nav className="text-lg font-bold text-gray-body font-body">
-      {mounted && (
-        <div className="z-20 fixed bottom-[500px] right-[50px]">
-          <button
-            type="button"
-            className="dark:text-dark-body"
-            onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
-          >
-            click me for {resolvedTheme === 'light' ? 'dark' : 'light'} theme
-          </button>
-        </div>
-      )}
+    <nav className="text-lg text-gray-body font-body">
       <div className="relative max-w-[1152px] h-[136px] flex items-center justify-center mx-auto bg-white dark:bg-dark">
         <div className="absolute left-[10px] top-[32px]">
           <Link href="/">
             <a data-testid="logo">
               <span className="sr-only">To Homepage</span>
               <Image
-                src={`/images/nav_logo_${resolvedTheme}.webp`}
+                src={`/images/nav_logo_${resolvedTheme}.svg`}
                 alt="logo"
                 width="72px"
                 height="72px"

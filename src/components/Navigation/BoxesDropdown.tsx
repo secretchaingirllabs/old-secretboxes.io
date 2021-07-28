@@ -2,6 +2,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { Box } from 'config/boxes'
 import { Fragment } from 'react'
 import clsx from 'clsx'
+import Link from 'next/link'
 
 export const BoxesDropdown: React.FC<{ boxes: Box[] }> = ({ boxes }) => {
   return (
@@ -56,26 +57,29 @@ export const BoxesDropdown: React.FC<{ boxes: Box[] }> = ({ boxes }) => {
       >
         <Menu.Items
           data-testid="dropdown-content"
-          className="absolute right-0 w-56 mt-2 origin-top -mr-4 bg-white divide-y divide-gray-100 rounded-md shadow-md focus:outline-none max-w-[163px] ring-1 ring-gray-label border-opacity-40"
+          className="absolute z-50 right-0 w-56 mt-2 origin-top -mr-4 bg-white divide-y divide-gray-100 rounded-md shadow-md focus:outline-none max-w-[163px] ring-1 ring-gray-label border-opacity-40"
         >
           <div className="py-1">
             {boxes.map((b) => (
-              <Menu.Item key={b.label}>
-                {({ active }) => (
-                  <button
-                    type="button"
-                    className={clsx(
-                      active && 'bg-primary',
-                      'hover:bg-primary group flex items-center w-full px-3 py-2 space-x-3'
+              <Link key={b.label} href={b.href}>
+                <a>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <div
+                        className={clsx(
+                          active && 'bg-primary',
+                          'group flex items-center w-full px-3 py-2 space-x-3'
+                        )}
+                      >
+                        {b.icon}
+                        <span className="text-2xl font-display text-dark-secondary">
+                          {b.label}
+                        </span>
+                      </div>
                     )}
-                  >
-                    {b.icon}
-                    <span className="text-2xl font-display text-dark-secondary">
-                      {b.label}
-                    </span>
-                  </button>
-                )}
-              </Menu.Item>
+                  </Menu.Item>
+                </a>
+              </Link>
             ))}
           </div>
         </Menu.Items>
