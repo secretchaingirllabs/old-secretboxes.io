@@ -1,6 +1,6 @@
 import { SidebarItem as SidebarItemType } from '@/config/sidebarItems'
 import clsx from 'clsx'
-import router from 'next/router'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 const SidebarItem = ({
@@ -54,7 +54,6 @@ const SidebarItem = ({
           <ul className="space-y-2">
             {items.map((subItem) => (
               <SidebarItem
-                as
                 SidebarItemType
                 key={subItem.name}
                 depth={depth + 1}
@@ -73,12 +72,14 @@ export const Sidebar: React.FC<{
   depthStep?: number
   depth?: number
 }> = ({ items, depthStep, depth }) => {
+  const { asPath } = useRouter()
+
   return (
     <div className="flex sidebar">
       <ul className="flex flex-col p-2 space-y-2">
         {items.map((sidebarItem) => (
           <SidebarItem
-            active={router.asPath === sidebarItem.href}
+            active={asPath === sidebarItem.href}
             key={sidebarItem.name}
             depthStep={depthStep}
             depth={depth}
