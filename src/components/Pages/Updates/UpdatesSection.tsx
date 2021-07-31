@@ -6,7 +6,7 @@ export const UpdatesSection: React.FC<{ title: string; icon: ReactNode }> = ({
   icon,
 }) => (
   <section>
-    <div className="flex items-center pl-4 space-x-3 mb-14">
+    <div className="flex items-center space-x-3 mb-9">
       {icon}
       <h1 className="font-semibold">{title}</h1>
     </div>

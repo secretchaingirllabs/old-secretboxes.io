@@ -19,6 +19,7 @@ const Home = () => {
   )
 }
 
+Home.title = 'Home'
 Home.Footer = FooterWithSignup
 
 export default Home

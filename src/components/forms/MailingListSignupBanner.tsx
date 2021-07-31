@@ -71,7 +71,7 @@ export const MailingListSignupBanner: React.FC<{
           </div>
           <label className="space-x-3" htmlFor="IAgreeToRecieveCoolStuff">
             <input
-              className="border-2 text-gray-body focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
+              className="border-2 text-gray-body focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary border-gray-placeholder bg-[#D6D8E6] "
               type="checkbox"
               id="IAgreeToRecieveCoolStuff"
               data-testid="i-agree"

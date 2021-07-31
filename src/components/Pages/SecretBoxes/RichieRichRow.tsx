@@ -1,5 +1,5 @@
+import { FeatureLabel } from '@/components/common/FeatureLabel'
 import { PrimaryButton } from '@/components/common/PrimaryButton'
-import { SecondaryButton } from '@/components/common/SecondaryButton'
 import { RichieRichLottie } from '@/components/Lotties/RichieRichLottie'
 
 export const RichieRichRow = () => {
@@ -8,7 +8,7 @@ export const RichieRichRow = () => {
       <div className="flex flex-col ">
         <div className="flex items-center mb-6 space-x-4">
           <h1 className="text-6xl font-display dark:text-primary">Richie Rich</h1>
-          <SecondaryButton>Coming Soon</SecondaryButton>
+          <FeatureLabel>Coming Soon</FeatureLabel>
         </div>
         <p className="mb-8 text-gray-body dark:text-dark-body">
           How do you find out who’s the richest without revealing your net

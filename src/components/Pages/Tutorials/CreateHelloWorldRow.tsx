@@ -1,9 +1,10 @@
+import { LinkButton } from '@/components/common/LinkButton'
 import Image from 'next/image'
 
 export const CreateHelloWorldRow = () => (
   <div className="flex flex-row-reverse items-center justify-between mx-[50px]">
     <div>
-      <h1 className="mb-3 text-2xl font-bold tracking-tighter">
+      <h1 className="mb-3 text-2xl font-bold tracking-tight">
         Create “Hello World” Contract
       </h1>
       <p className="mb-3">
@@ -17,10 +18,7 @@ export const CreateHelloWorldRow = () => (
         <br />
         morbi.
       </p>
-      <button
-        type="button"
-        className="flex items-center space-x-2 font-semibold text-gray-body dark:text-dark-body"
-      >
+      <LinkButton>
         <span>Use Docker to launch your Secret Node</span>
         <svg
           width="12"
@@ -34,7 +32,7 @@ export const CreateHelloWorldRow = () => (
             fill="currentColor"
           />
         </svg>
-      </button>
+      </LinkButton>
     </div>
     <Image src="/images/tutorials_ufo.png" height="223px" width="288px" />
   </div>

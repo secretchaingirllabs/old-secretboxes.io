@@ -10,11 +10,13 @@ export const SecretCounterRow = () => {
         <p className="mb-8 text-gray-body dark:text-dark-body">
           This is the starting point for learning about Secret Contracts.
           <br />
-          Based on the “simple counter” secret contract this box illustrates
+          Based on the <span className="font-semibold">“simple counter”</span> secret
+          contract this box illustrates
           <br />
           the basics of querying and modifying contract state using the
           <br />
-          “getCount” and “increment” messages.
+          <span className="font-semibold">“get Count”</span> and{' '}
+          <span className="font-semibold">“increment”</span> messages.
         </p>
         <div className="flex space-x-4">
           <PrimaryButton>

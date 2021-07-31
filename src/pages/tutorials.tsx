@@ -30,14 +30,16 @@ const Tutorials = () => {
               <AddDebugMessageRow />
             </div>
 
-            <div className="relative -bottom-64">
+            <div className="relative -bottom-60">
               <ReadyToTryItRow />
             </div>
           </div>
         </div>
       </div>
-      <div className="relative flex items-center justify-center select-none ">
-        <Image src="/images/tutorials_pine_trees.png" width="1440px" height="360px" />
+      <div className="relative flex items-center justify-center select-none">
+        <div className="w-screen h-[360px]">
+          <Image src="/images/tutorials_pine_trees.png" layout="fill" />
+        </div>
         <div className="absolute transform -translate-x-1/2 -top-14 left-1/2">
           <Image
             src="/images/tutorials_alien_abduction.png"
@@ -49,5 +51,7 @@ const Tutorials = () => {
     </div>
   )
 }
+
+Tutorials.title = 'Tutorials'
 
 export default Tutorials

@@ -1,6 +1,8 @@
+import { LinkButton } from '@/components/common/LinkButton'
+
 export const ReadyToTryItRow = () => (
   <div className="flex flex-col items-center ">
-    <h1 className="mb-3 text-2xl font-bold tracking-tighter text-center">
+    <h1 className="mb-3 text-2xl font-bold tracking-tight text-center">
       Now You’re Ready to Try It!
     </h1>
     <p className="mb-5 text-center">
@@ -12,10 +14,7 @@ export const ReadyToTryItRow = () => (
       <br />
       sollicitudin non adipiscing morbi.
     </p>
-    <button
-      type="button"
-      className="flex items-center space-x-2 font-semibold text-gray-body dark:text-dark-body"
-    >
+    <LinkButton>
       <span>See It In Action</span>
       <svg
         width="12"
@@ -29,6 +28,6 @@ export const ReadyToTryItRow = () => (
           fill="currentColor"
         />
       </svg>
-    </button>
+    </LinkButton>
   </div>
 )

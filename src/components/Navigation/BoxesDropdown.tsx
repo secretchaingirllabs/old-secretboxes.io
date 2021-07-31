@@ -4,7 +4,10 @@ import { Fragment } from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
 
-export const BoxesDropdown: React.FC<{ boxes: Box[] }> = ({ boxes }) => {
+export const BoxesDropdown: React.FC<{ boxes: Box[]; dark?: boolean }> = ({
+  boxes,
+  dark,
+}) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -14,7 +17,9 @@ export const BoxesDropdown: React.FC<{ boxes: Box[] }> = ({ boxes }) => {
         >
           {({ open }) => (
             <>
-              <span className="flex flex-col items-center dark:text-dark-body">
+              <span
+                className={clsx(dark && 'text-dark-body', 'flex flex-col items-center')}
+              >
                 Boxes
                 <div
                   className={clsx(
@@ -26,7 +31,8 @@ export const BoxesDropdown: React.FC<{ boxes: Box[] }> = ({ boxes }) => {
               <svg
                 className={clsx(
                   open ? 'rotate-180' : 'rotate-0',
-                  'transform transition-transform h-4 w-4 dark:text-dark-body'
+                  'transform transition-transform h-4 w-4',
+                  dark && 'text-dark-body'
                 )}
                 width="18"
                 height="10"

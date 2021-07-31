@@ -5,7 +5,13 @@ import Image from 'next/image'
 export const SupportCard: React.FC<{ supportCard: ISupportCard }> = ({ supportCard }) => {
   return (
     <div className="flex items-center space-x-13 p-6 max-w-[772px] shadow-md hover:shadow-lg transition bg-white flex-col md:flex-row">
-      <Image quality={100} src={supportCard.image} width="212px" height="212px" />
+      <Image
+        className="overflow-hidden rounded-lg"
+        quality={100}
+        src={supportCard.image}
+        width="212px"
+        height="212px"
+      />
       <div className="w-full">
         <h2 className="mb-3 text-2xl">{supportCard.title}</h2>
         <p

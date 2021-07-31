@@ -1,16 +1,16 @@
 import { boxes } from '@/config/boxes'
 import { NavLink as NavLinkType } from '@/config/navLinks'
-import { useTheme } from 'next-themes'
+import clsx from 'clsx'
 import { useRouter } from 'next/dist/client/router'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { BoxesDropdown } from './BoxesDropdown'
 import { NavLink } from './NavLink'
 
-const Nav: React.FC<{ navLinks: NavLinkType[] }> = ({ navLinks }) => {
+const Nav: React.FC<{ navLinks: NavLinkType[]; dark?: boolean }> = ({
+  navLinks,
+  dark,
+}) => {
   const [mounted, setMounted] = useState(false)
-  const { resolvedTheme } = useTheme()
   const { asPath } = useRouter()
   const [currentPath, setCurrentPath] = useState('')
 
@@ -21,28 +21,22 @@ const Nav: React.FC<{ navLinks: NavLinkType[] }> = ({ navLinks }) => {
   }, [asPath])
 
   return (
-    <nav className="text-lg text-gray-body font-body">
-      <div className="relative max-w-[1152px] h-[136px] flex items-center justify-center mx-auto bg-white dark:bg-dark">
-        <div className="absolute left-[10px] top-[32px]">
-          <Link href="/">
-            <a data-testid="logo">
-              <span className="sr-only">To Homepage</span>
-              <Image
-                src={`/images/nav_logo_${resolvedTheme}.svg`}
-                alt="logo"
-                width="72px"
-                height="72px"
-              />
-            </a>
-          </Link>
-        </div>
+    <nav
+      className={clsx(dark ? 'bg-dark' : 'bg-white', 'text-lg text-gray-body font-body')}
+    >
+      <div
+        className={clsx(
+          dark ? 'bg-dark' : 'bg-white',
+          'flex items-center justify-center mx-auto'
+        )}
+      >
         <ul className="flex space-x-[35px] items-center">
           <li className="-mr-3">
-            <BoxesDropdown boxes={boxes} />
+            <BoxesDropdown dark={dark} boxes={boxes} />
           </li>
           {navLinks.map((n) => (
             <li key={n.label}>
-              <NavLink navLink={n} isActive={currentPath === n.href} />
+              <NavLink dark={dark} navLink={n} isActive={currentPath === n.href} />
             </li>
           ))}
         </ul>

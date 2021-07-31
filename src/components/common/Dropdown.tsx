@@ -8,7 +8,7 @@ export const Dropdown: React.FC<{
 }> = ({ children, items }) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button>{children}</Menu.Button>
+      {children}
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
@@ -28,7 +28,7 @@ export const Dropdown: React.FC<{
                 {({ active }) => (
                   <div
                     className={clsx(
-                      active && 'bg-primary',
+                      active && 'bg-primary font-semibold text-gray-body',
                       'group flex items-center w-full px-3 py-2 space-x-3'
                     )}
                   >

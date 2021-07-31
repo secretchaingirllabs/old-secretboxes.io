@@ -24,8 +24,8 @@ export const OperatingSystemDropdown = () => {
             </span>
             <svg
               className={clsx(
-                open ? 'rotate-180' : 'rotate-0',
-                'transform transition-transform h-4 w-4 dark:text-dark-body'
+                open ? '-rotate-180' : '-rotate-90',
+                'transform transition-transform h-3 w-3 dark:text-dark-body'
               )}
               width="18"
               height="10"

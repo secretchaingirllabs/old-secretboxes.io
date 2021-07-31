@@ -21,7 +21,7 @@ export const BoxIconAndLinesStructure = () => {
       </div>
       <div className="flex flex-col self-end">
         <div className="self-end filter dark:invert">
-          <Image src="/images/tutorials_short_line.png" height="470px" width="462px" />
+          <Image src="/images/tutorials_short_line.png" height="470px" width="445px" />
         </div>
         <div className="self-start -mt-1 transform -translate-x-1/2">
           <BoxCircleIcon />

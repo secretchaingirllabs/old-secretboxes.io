@@ -1,9 +1,10 @@
+import { LinkButton } from '@/components/common/LinkButton'
 import Image from 'next/image'
 
 export const AddDebugMessageRow = () => (
   <div className="flex items-center justify-between mx-[50px]">
     <div>
-      <h1 className="mb-3 text-2xl font-bold tracking-tighter">Add Debug Messages</h1>
+      <h1 className="mb-3 text-2xl font-bold tracking-tight">Add Debug Messages</h1>
       <p className="mb-3">
         Tutorial description Lorem ipsum dolor sit amet,
         <br />
@@ -15,10 +16,7 @@ export const AddDebugMessageRow = () => (
         <br />
         morbi.
       </p>
-      <button
-        type="button"
-        className="flex items-center space-x-2 font-semibold text-gray-body dark:text-dark-body"
-      >
+      <LinkButton>
         <span>Find out what your Secret Contract is doing</span>
         <svg
           width="12"
@@ -32,7 +30,7 @@ export const AddDebugMessageRow = () => (
             fill="currentColor"
           />
         </svg>
-      </button>
+      </LinkButton>
     </div>
     <Image src="/images/tutorials_ufo.png" height="223px" width="288px" />
   </div>

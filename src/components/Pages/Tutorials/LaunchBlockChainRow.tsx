@@ -4,7 +4,7 @@ import Image from 'next/image'
 export const LaunchBlockChainRow = () => (
   <div className="flex items-center justify-between mx-[50px]">
     <div>
-      <h1 className="mb-3 text-2xl font-bold tracking-tighter">
+      <h1 className="mb-3 text-2xl font-bold tracking-tight">
         Launch Developer Blockchain
       </h1>
       <p className="mb-3">

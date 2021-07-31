@@ -41,7 +41,7 @@ export const SupportTicketForm: React.FC<{
           <input
             data-testid="email-field"
             type="email"
-            className="w-full max-w-xs px-2 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
+            className="w-full max-w-xs px-2 border-2 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
             placeholder="wumpus@foo.com"
             onChange={(e) => setValue('email', e.target.value)}
             required
@@ -57,7 +57,7 @@ export const SupportTicketForm: React.FC<{
           <input
             data-testid="subject-field"
             type="text"
-            className="w-full max-w-xs px-2 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
+            className="w-full max-w-xs px-2 border-2 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
             placeholder="How do..."
             onChange={(e) => setValue('subject', e.target.value)}
             required
@@ -72,7 +72,7 @@ export const SupportTicketForm: React.FC<{
           <textarea
             id="description"
             data-testid="description-field"
-            className="h-[200px] w-[500px] max-w-lg p-4 rounded-none focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
+            className="h-[200px] w-[500px] max-w-lg p-4 focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary border-2 rounded-sm border-2"
             placeholder="I need help with getting my environment setup."
             onChange={(e) => setValue('description', e.target.value)}
             required
@@ -88,13 +88,13 @@ export const SupportTicketForm: React.FC<{
             data-testid="subject-field"
             id="subject"
             type="text"
-            className="w-full max-w-xs px-2 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
+            className="w-full max-w-xs px-2 mb-2 border-2 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
             placeholder="/"
             onChange={(e) => setValue('subject', e.target.value)}
             required
           />
         </label>
-        <span className="block text-xs text-gray-body">
+        <span className="block ml-4 text-xs text-gray-body">
           Run the `node --version` command
         </span>
       </div>
@@ -107,14 +107,14 @@ export const SupportTicketForm: React.FC<{
             id="npmVersion"
             data-testid="npmVersion-field"
             type="text"
-            className="w-full max-w-xs px-2 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
+            className="w-full max-w-xs px-2 mb-2 border-2 rounded-lg focus:ring-2 focus:ring-white/80 focus:border-primary focus:ring-offset-1 focus:ring-offset-primary"
             placeholder="/"
             onChange={(e) => setValue('npmVersion', e.target.value)}
             required
           />
         </label>
-        <span className="block text-xs text-gray-body">
-          Run the `node --version` command
+        <span className="block ml-4 text-xs text-gray-body">
+          Run the `npm --version` command
         </span>
       </div>
       <PrimaryButton type="submit" className="w-full max-w-xs mb-7">

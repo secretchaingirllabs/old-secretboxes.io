@@ -7,10 +7,11 @@ interface IconStyle {
   iconColor?: string
   hoveredIconColor?: string
 }
-export const SocialsNav: React.FC<{ socials: Social[]; iconStyle?: IconStyle }> = ({
-  socials,
-  iconStyle,
-}) => {
+export const SocialsNav: React.FC<{
+  dark?: boolean
+  socials: Social[]
+  iconStyle?: IconStyle
+}> = ({ socials, iconStyle }) => {
   return (
     <ul className="h-[50px] flex justify-end items-center space-x-3">
       {socials.map((s) => (
@@ -21,7 +22,7 @@ export const SocialsNav: React.FC<{ socials: Social[]; iconStyle?: IconStyle }> 
               rel="noopener"
               data-testid={`${s.label}-social`}
               style={{ background: iconStyle && iconStyle.backgroundColor }}
-              className="h-[30px] w-[30px] flex items-center justify-center bg-white rounded-full hover:text-gray-label text-gray-body transition-colors"
+              className="text-gray-body h-[30px] w-[30px] flex items-center justify-center bg-white rounded-full hover:text-gray-label transition-colors"
             >
               <span className="sr-only">{s.label}</span>
               {s.icon}

@@ -1,3 +1,4 @@
+import { FeatureLabel } from '@/components/common/FeatureLabel'
 import { PrimaryButton } from '@/components/common/PrimaryButton'
 import { SecondaryButton } from '@/components/common/SecondaryButton'
 import { SecretCounterLottie } from '@/components/Lotties/SecretCounterLottie'
@@ -12,9 +13,7 @@ export const SecretCounterBox = () => {
       <div>
         <div className="flex items-center mb-4 space-x-4">
           <h2 className="text-5xl select-none font-display">Secret Counter</h2>
-          <SecondaryButton size="sm" className="font-normal">
-            New
-          </SecondaryButton>
+          <FeatureLabel>New</FeatureLabel>
         </div>
         <div className="group-hover:h-[120px] h-0 overflow-hidden transition-all">
           <p className="mb-6 text-sm tracking-tight select-none">

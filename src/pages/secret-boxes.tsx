@@ -29,4 +29,6 @@ const SecretBoxes = () => {
   )
 }
 
+SecretBoxes.title = 'Secret Boxes'
+
 export default SecretBoxes
