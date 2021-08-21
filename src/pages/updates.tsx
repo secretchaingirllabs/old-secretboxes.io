@@ -1,3 +1,4 @@
+import { MainLayout } from '@/components/Layouts/MainLayout'
 import { HighlightsCard } from '@/components/Pages/Updates/HighlightsCard'
 import { HightLightsRightCard } from '@/components/Pages/Updates/HightLightsRightCard'
 import { ImportantUpdatesCard } from '@/components/Pages/Updates/ImportantUpdatesCard'
@@ -8,7 +9,7 @@ import Image from 'next/image'
 
 const Updates = () => {
   return (
-    <div>
+    <MainLayout title="Updates">
       <div className="h-[197px] w-[100vw] relative mb-14">
         <Image src="/images/updates_banner.png" layout="fill" />
         <div className="flex items-center space-x-8 absolute top-[3rem] left-[318px]">
@@ -65,10 +66,8 @@ const Updates = () => {
           </div>
         </UpdatesSection>
       </div>
-    </div>
+    </MainLayout>
   )
 }
-
-Updates.title = 'News & Updates'
 
 export default Updates

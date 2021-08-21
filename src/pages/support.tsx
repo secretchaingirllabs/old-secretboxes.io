@@ -1,5 +1,6 @@
 import { RequestSubmittedModal } from '@/components/common/modals/RequestSubmittedModal'
 import { SupportTicketForm } from '@/components/forms/SupportTicketForm'
+import { MainLayout } from '@/components/Layouts/MainLayout'
 import { SupportCard } from '@/components/Pages/Support/SupportCard'
 import { SupportHeader } from '@/components/Pages/Support/SupportHeader'
 import { supportCards } from '@/config/supportCards'
@@ -13,7 +14,7 @@ const Support = () => {
   }
 
   return (
-    <>
+    <MainLayout title="Support">
       <RequestSubmittedModal />
       <div className="max-w-[1152px] mx-[auto] pt-12 px-3 md:px-0">
         <SupportHeader />
@@ -32,10 +33,8 @@ const Support = () => {
         {/* eslint-disable-next-line no-console */}
         <SupportTicketForm onSubmit={onRequestTicketSubmit} />
       </div>
-    </>
+    </MainLayout>
   )
 }
-
-Support.title = 'Support'
 
 export default Support

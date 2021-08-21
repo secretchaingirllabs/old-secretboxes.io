@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { UploadDataAndReadTime } from './UploadDataAndReadTime'
 
 export const HighlightsCard = () => (
-  <Link href="updates/griptape-secret-box-launching.mdx">
+  <Link href="updates/griptape-secret-box-launching">
     <a>
       <div className="flex items-center justify-between p-6 space-x-10 transition shadow-md hover:shadow-lg">
         <div>
