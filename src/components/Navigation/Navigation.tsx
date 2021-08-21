@@ -2,7 +2,6 @@ import { boxes } from '@/config/boxes'
 import { NavLink as NavLinkType } from '@/config/navLinks'
 import clsx from 'clsx'
 import { useRouter } from 'next/dist/client/router'
-import { useEffect, useState } from 'react'
 import { BoxesDropdown } from './BoxesDropdown'
 import { NavLink } from './NavLink'
 
@@ -10,15 +9,7 @@ const Nav: React.FC<{ navLinks: NavLinkType[]; dark?: boolean }> = ({
   navLinks,
   dark,
 }) => {
-  const [mounted, setMounted] = useState(false)
   const { asPath } = useRouter()
-  const [currentPath, setCurrentPath] = useState('')
-
-  // After mounting, we have access to the theme
-  useEffect(() => {
-    if (!mounted) setMounted(true)
-    setCurrentPath(asPath)
-  }, [asPath])
 
   return (
     <nav
@@ -36,7 +27,7 @@ const Nav: React.FC<{ navLinks: NavLinkType[]; dark?: boolean }> = ({
           </li>
           {navLinks.map((n) => (
             <li key={n.label}>
-              <NavLink dark={dark} navLink={n} isActive={currentPath === n.href} />
+              <NavLink dark={dark} navLink={n} isActive={asPath.includes(n.href)} />
             </li>
           ))}
         </ul>
