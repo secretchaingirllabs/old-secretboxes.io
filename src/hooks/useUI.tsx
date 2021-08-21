@@ -1,6 +1,6 @@
 import React, { FC, useContext, useMemo } from 'react'
 
-export type ModalViews = 'RequestSubmitted'
+export type ModalViews = 'RequestSubmitted' | 'YesFeedback' | 'NoFeedback'
 export type ToastType = 'success' | 'warning' | 'error' | 'info'
 export interface Toast {
   id: string

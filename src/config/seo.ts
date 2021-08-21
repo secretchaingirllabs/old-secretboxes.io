@@ -6,3 +6,5 @@ export const SITE_URL =
 export const appTitle = 'Secret Boxes'
 export const appDescription =
   'The beautiful, fun and easy way to get started building Secret Apps.'
+
+export const githublink = 'https://github.com/SecretChainGirl-Foundation/secret-boxes'
