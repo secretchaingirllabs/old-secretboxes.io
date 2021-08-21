@@ -23,6 +23,10 @@
     font-display: swap;
     src: url('/assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf') format('woff2');
   }
+
+  .no-underline {
+    text-decoration: none !important;
+  }
 }
 
 :root {

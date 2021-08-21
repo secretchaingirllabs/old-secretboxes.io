@@ -31,6 +31,9 @@
     "react/require-default-props": "off", // Typescript catches optional props
     "no-unneeded-ternary": "off", // @/hooks/useAuth line 25
     "jsx-a11y/label-has-associated-control": "off", // InputField and SelectField not being parsed as control
+    "link-passhref": "off", // InputField and SelectField not being parsed as control
+    "jsx-a11y/anchor-has-content": "off",
+    "react/destructuring-assignment": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {

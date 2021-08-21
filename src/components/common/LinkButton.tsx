@@ -19,7 +19,7 @@ export const LinkButton: React.FC<ButtonProps> = ({
       // eslint-disable-next-line react/button-has-type
       type={type ?? 'button'}
       className={clsx(
-        'focus:text-[#4867F8] hover:text-gray-primary hover:underline text-gray-body dark:text-dark-body relative disabled:outline-none focus:outline-none focus:shadow-light-button-shadow flex items-center justify-center font-semibold transition-colors group space-x-2',
+        'focus:text-[#4867F8] hover:text-gray-primary hover:underline text-gray-body dark:text-dark-body relative disabled:outline-none focus:outline-none flex items-center justify-center font-semibold transition-colors group space-x-2',
         padding,
         className
       )}

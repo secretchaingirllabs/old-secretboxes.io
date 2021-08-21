@@ -25,7 +25,7 @@ const SidebarItem = ({
             'w-full font-semibold flex items-center p-[10px] space-x-2 hover:bg-[#2F3133] hover:text-primary rounded'
           )}
         >
-          {icon} <span>{label}</span>{' '}
+          {icon} <span>{label}</span>
           {Array.isArray(items) ? (
             <svg
               className={clsx(

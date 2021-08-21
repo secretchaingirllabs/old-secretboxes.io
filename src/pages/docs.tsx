@@ -3,6 +3,7 @@ import { DocsLayout } from '@/components/Layouts/DocsLayout'
 import { DocsHomeCard } from '@/components/Pages/Docs/HomeCards'
 import { docsContactCards, docsHomeCards } from '@/config/docsHomeCards'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Docs = () => {
   return (
@@ -14,7 +15,11 @@ const Docs = () => {
       <ul className="grid w-full grid-cols-3 gap-3 mb-13">
         {docsHomeCards.map((d) => (
           <li key={d.label}>
-            <DocsHomeCard docsHomeCard={d} />
+            <Link href="/docs/errors-and-how-to-resolve-them">
+              <a>
+                <DocsHomeCard docsHomeCard={d} />
+              </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -47,7 +52,10 @@ const Docs = () => {
       </div>
       <ul className="grid w-full grid-cols-3 gap-4 mb-24">
         {docsContactCards.map((d) => (
-          <li className="hover:bg-[#2F3133] rounded-lg flex flex-col items-center justify-between p-8 h-[276px] transition">
+          <li
+            key={d.image}
+            className="hover:bg-[#2F3133] rounded-lg flex flex-col items-center justify-between p-8 h-[276px] transition"
+          >
             <Image src={d.image} height="122px" width="122px" />
             <p>{d.description}</p>
           </li>

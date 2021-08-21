@@ -17,7 +17,7 @@ const Layout: React.FC<{ Footer?: () => JSX.Element; title?: string }> = ({
 }) => {
   const router = useRouter()
   const meta: any = {
-    title: `${title} – ${appTitle}`,
+    title: title ? `${title} – ${appTitle}` : appTitle,
     description: appDescription,
     image: `${SITE_URL}/images/cover.png`,
     type: 'website',

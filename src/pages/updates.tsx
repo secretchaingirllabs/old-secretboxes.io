@@ -58,7 +58,8 @@ const Updates = () => {
           </div>
         </UpdatesSection>
         <UpdatesSection {...updateSections[1]}>
-          <div className="flex flex-col flex-grow space-y-4">
+          <div className="flex flex-col flex-grow space-y-4 pb-14">
+            <ImportantUpdatesCard />
             <ImportantUpdatesCard />
             <SkeletonImportantUpdatesCard />
           </div>
